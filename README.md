@@ -25,7 +25,7 @@ allprojects {
 **Step 2.** Add the dependency
 ```
 	dependencies {
-	        implementation 'com.github.hbreakkid174:MyUtilitiesLibrary:1.4-beta01'
+	        implementation 'com.github.hbreakkid174:MyUtilitiesLibrary:1.0-beta01'
 	}
 ```
 
