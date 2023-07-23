@@ -70,8 +70,8 @@
         android:id="@+id/text4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Toast"
         android:layout_margin="10dp"
+        android:text="Toast"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/multiPerm" />
 
@@ -79,10 +79,20 @@
         android:id="@+id/showToast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Toast"
         android:layout_margin="10dp"
+        android:text="Show Toast"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/testBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Test Btn"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showToast" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

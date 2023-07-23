@@ -6,14 +6,21 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mylibrary.checkPermissionGranted
 import com.example.mylibrary.debug
+import com.example.mylibrary.feedbackEmail
 import com.example.mylibrary.getEncryptedPrefValue
 import com.example.mylibrary.getObject
 import com.example.mylibrary.getPref
+import com.example.mylibrary.moreApps
 import com.example.mylibrary.multiPermission
 import com.example.mylibrary.myAppPreferences
+import com.example.mylibrary.openUrl
+import com.example.mylibrary.rateUsApp
 import com.example.mylibrary.saveEncryptedPrefValue
 import com.example.mylibrary.setPref
+import com.example.mylibrary.shareApp
+import com.example.mylibrary.shareText
 import com.example.mylibrary.singlePermission
+import com.example.mylibrary.startActivity
 import com.example.mylibrary.toastShort
 import com.example.myutilitieslibrary.databinding.ActivityMainBinding
 
@@ -59,11 +66,24 @@ class MainActivity : AppCompatActivity() {
 
         //TODO; save & get model class from preference
         saveAndGetModelClassFromPref()
+
+        binding?.testBtn?.setOnClickListener {
+            /*     openUrl(browserUrl = "https://www.google.com/", onLinkNotFoundError = {
+                     //show your error message on UI
+                     debug("onLinkNotFoundError")
+                 })*/
+//            rateUsApp("com.whatsapp")
+//            moreApps(playStoreAccountName = "WhatsApp+LLC")
+//            shareApp(packageNameApp = "com.whatsapp")
+//            feedbackEmail(email = "abc@gmail.com", subject = "error", body = "giving app feedback")
+//            startActivity<MainActivity>()
+//            shareText("sharing text to other app")
+        }
     }
 
     private fun saveAndGetModelClassFromPref() {
-        val testModel = TestModel("modelclass",true)
-        setPref("testModel",testModel)
+        val testModel = TestModel("modelclass", true)
+        setPref("testModel", testModel)
         debug("get model: ${myAppPreferences.getObject<TestModel>("testModel")}")
     }
 
